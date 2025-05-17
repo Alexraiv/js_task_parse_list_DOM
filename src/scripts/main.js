@@ -5,7 +5,7 @@ const peopleList = document.querySelector('ul');
 const items = Array.from(peopleList.querySelectorAll('li'));
 
 const sortList = (list) => {
-  const sortedItems = list.sort((a, b) => {
+  const sortedItems = [...list].sort((a, b) => {
     const salaryA = Number(a.dataset.salary.replace(/[$,]/g, ''));
     const salaryB = Number(b.dataset.salary.replace(/[$,]/g, ''));
 
